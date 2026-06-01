@@ -2,7 +2,7 @@ import Container from "../Container/Container";
 
 import css from "./Advantages.module.scss";
 
-import star from "../../assets/star.svg";
+import star from "../../assets/svg/star.svg";
 import AdvantageItem from "../AdvantageItem/AdvantageItem";
 
 const advantagesData = [

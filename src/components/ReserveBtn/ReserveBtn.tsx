@@ -1,4 +1,4 @@
-import star from "../../assets/star.svg";
+import star from "../../assets/svg/star.svg";
 import css from "./ReserveBtn.module.scss";
 
 export default function ReserveBtn() {

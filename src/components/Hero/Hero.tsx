@@ -1,8 +1,8 @@
 import Container from "../Container/Container";
 
-import star from "../../assets/star.svg";
-import arch1 from "../../assets/arch.png";
-import jasmine from "../../assets/jasmine.png";
+import star from "../../assets/svg/star.svg";
+import arch1 from "../../assets/images/arch.png";
+import jasmine from "../../assets/images/jasmine.png";
 
 import css from "./Hero.module.scss";
 import ReserveBtn from "../ReserveBtn/ReserveBtn";
