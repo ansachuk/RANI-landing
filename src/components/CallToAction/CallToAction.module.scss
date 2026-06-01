@@ -1,0 +1,52 @@
+.callToAction {
+	background: linear-gradient(90deg, #fed5b5 0%, #f6ebde 100%);
+
+	border-top: 1.5px solid #bc8b65;
+	border-bottom: 1.5px solid #bc8b65;
+	padding: 30px 0;
+
+	margin-top: 60px;
+	margin-bottom: 200px;
+}
+
+.container {
+	display: flex;
+
+	align-items: center;
+}
+
+.wrapper {
+	flex-basis: 40%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.imgWrapper {
+	flex-basis: 60%;
+
+	position: relative;
+
+	height: 135px;
+
+	.candle {
+		position: absolute;
+		bottom: -120px;
+		right: -20px;
+
+		@media (min-width: 768px) {
+			right: -32px;
+		}
+
+		@media (min-width: 1200px) {
+			right: -75px;
+		}
+	}
+}
+
+.title {
+	font-size: 36px;
+	font-family: "Cormorant Garamond", serif;
+	letter-spacing: -1px;
+}

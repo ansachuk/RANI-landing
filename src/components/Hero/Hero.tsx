@@ -26,9 +26,8 @@ export default function Hero() {
 					</div>
 					<img className={css.jasmine} src={jasmine} alt="Jasmine" />
 				</div>
-				<div className={css.heroImage}>
-					<img width={800} src={arch1} alt="Hero" />
-				</div>
+
+				<img className={css.arch} src={arch1} alt="Hero" />
 			</div>
 		</Container>
 	);
