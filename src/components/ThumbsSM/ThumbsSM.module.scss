@@ -1,0 +1,48 @@
+.container {
+	margin-top: 40px;
+
+	h2 {
+		font-family: "Cormorant Garamond", serif;
+		font-size: 40px;
+		font-weight: 900;
+		letter-spacing: -1px;
+
+		text-align: center;
+
+		margin-bottom: 20px;
+	}
+}
+
+.list {
+	display: flex;
+
+	gap: 18px;
+}
+
+.thumb {
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: rgb(243, 233, 223);
+	box-shadow:
+		rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+	flex-basis: calc((100% - (18px * 4)) / 5);
+}
+
+.title {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 24px;
+	font-weight: 900;
+}
+
+.description {
+	font-size: 16px;
+}
+
+.info {
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}

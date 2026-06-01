@@ -1,7 +1,62 @@
 .container {
-	margin-top: 50px;
+	margin-top: 80px;
+}
 
-	margin-bottom: 200px;
+.list {
+	display: flex;
+	justify-content: space-between;
+	gap: 5px;
+
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.thumb {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	padding: 25px;
+
+	background-color: rgb(250, 244, 239);
+	box-shadow:
+		rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	border-radius: 10px;
+
+	flex-basis: calc((100% / 3) - 10px);
+
+	background-size: contain;
+	background-position: right;
+	background-repeat: no-repeat;
+
+	&.medicine {
+		background-image: url("../../assets/images/spiral.png");
+	}
+
+	&.philosophy {
+		background-image: url("../../assets/images/spiral.png");
+	}
+
+	&.contact {
+		background-image: url("../../assets/images/spiral.png");
+	}
+
+	h4 {
+		font-family: "Cormorant Garamond", serif;
+		font-size: 24px;
+		font-weight: 900;
+
+		letter-spacing: -1px;
+
+		flex-grow: 1;
+
+		width: 60%;
+	}
+}
+
+.description {
+	font-size: 16px;
+	width: 55%;
 }
 
 .starWrapper {
@@ -10,8 +65,8 @@
 	&::after {
 		content: "";
 		position: absolute;
-		top: 45%;
-		left: -9px;
+		top: 50%;
+		left: -12px;
 
 		width: 80px;
 		height: 1.5px;
@@ -19,6 +74,6 @@
 	}
 }
 
-.star {
-	margin-left: 20px;
+.image {
+	height: 100%;
 }
