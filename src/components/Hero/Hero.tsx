@@ -14,7 +14,7 @@ export default function Hero() {
 				<div className={css.heroInfo}>
 					<h1 className={css.title}>Piękno w harmonii ciała i ducha</h1>
 					<div className={css.starWrapper}>
-						<img className={css.star} src={star} alt="Star" width={22} height={22} />
+						<img className={css.star} src={star} alt="Star" width={36} height={36} />
 					</div>
 
 					<p className={css.desc}>Nowoczesna regeneracja skóry i swiadoma troska o siebie.</p>

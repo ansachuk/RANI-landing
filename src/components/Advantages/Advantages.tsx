@@ -33,7 +33,7 @@ export default function Advantages() {
 		<Container className={css.advantagesContainer}>
 			<h2 className={css.advantagesTitle}>Holistyczne podejście do Twojego piękna</h2>
 			<div className={css.starWrapper}>
-				<img className={css.star} src={star} alt="Star" width={22} height={22} />
+				<img className={css.star} src={star} alt="Star" width={40} height={40} />
 			</div>
 			<ul className={css.advantagesList}>
 				{advantagesData.map((advantage, index) => (

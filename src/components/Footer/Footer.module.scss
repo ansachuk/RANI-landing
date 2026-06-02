@@ -1,6 +1,43 @@
 footer {
 	background-color: #fed5b5;
 	margin-top: 20px;
+
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+
+		height: 280px;
+		width: 280px;
+		background-image: url("../../assets/images/big-star.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		z-index: 1000;
+
+		transform: translateX(-33%);
+		bottom: -130px;
+		left: 5px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+
+		height: 280px;
+		width: 280px;
+		background-image: url("../../assets/images/big-star.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		z-index: 1000;
+
+		transform: translateX(66%);
+		bottom: -130px;
+		right: 0%;
+	}
 }
 
 .container {
