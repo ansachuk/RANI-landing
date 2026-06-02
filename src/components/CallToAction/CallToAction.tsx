@@ -3,7 +3,7 @@ import ReserveBtn from "../ReserveBtn/ReserveBtn";
 
 import css from "./CallToAction.module.scss";
 
-import candle from "../../assets/images/candle.png";
+import candle from "../../assets/images/candle.webp";
 
 export default function CallToAction() {
 	return (

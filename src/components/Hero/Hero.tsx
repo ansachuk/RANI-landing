@@ -1,11 +1,11 @@
 import Container from "../Container/Container";
+import ReserveBtn from "../ReserveBtn/ReserveBtn";
 
 import star from "../../assets/svg/star.svg";
-import arch1 from "../../assets/images/arch.png";
-import jasmine from "../../assets/images/jasmine.png";
+import arch from "../../assets/images/arch.webp";
+import jasmine from "../../assets/images/jasmine.webp";
 
 import css from "./Hero.module.scss";
-import ReserveBtn from "../ReserveBtn/ReserveBtn";
 
 export default function Hero() {
 	return (
@@ -27,7 +27,7 @@ export default function Hero() {
 					<img className={css.jasmine} src={jasmine} alt="Jasmine" />
 				</div>
 
-				<img className={css.arch} src={arch1} alt="Hero" />
+				<img className={css.arch} src={arch} alt="Hero" />
 			</div>
 		</Container>
 	);
