@@ -6,12 +6,12 @@ import ThumbsSM from "../ThumbsSM/ThumbsSM";
 
 export default function Main() {
 	return (
-		<main>
+		<>
 			<Hero />
 			<Advantages />
 			<CallToAction />
 			<ThumbsXL />
 			<ThumbsSM />
-		</main>
+		</>
 	);
 }

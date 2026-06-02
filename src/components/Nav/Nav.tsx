@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import css from "./Nav.module.scss";
 
 export default function Nav() {
@@ -5,19 +6,17 @@ export default function Nav() {
 		<nav>
 			<ul className={css.navList}>
 				<li>
-					<a href="#about">O nas</a>
+					<NavLink to="/RANI-landing/about">O nas</NavLink>
 				</li>
 				<li>
-					<a href="#treatments">Zabiegi</a>
+					<NavLink to="/RANI-landing/treatment">Zabiegi</NavLink>
 				</li>
 				<li>
-					<a href="#philosophy">Filozofia</a>
+					<NavLink to="/RANI-landing/philosophy">Filozofia</NavLink>
 				</li>
+
 				<li>
-					<a href="#blog">Blog</a>
-				</li>
-				<li>
-					<a href="#contact">Kontakt</a>
+					<NavLink to="/RANI-landing/contact">Kontakt</NavLink>
 				</li>
 			</ul>
 		</nav>

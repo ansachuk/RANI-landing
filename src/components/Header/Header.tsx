@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 import Container from "../Container/Container";
 import Logo from "../Logo/Logo";
@@ -8,7 +8,7 @@ import ReserveBtn from "../ReserveBtn/ReserveBtn";
 import css from "./Header.module.scss";
 
 export default function Header() {
-	const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+	// const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
 	return (
 		<header>
@@ -16,7 +16,11 @@ export default function Header() {
 				<Logo />
 				<Nav />
 				<ReserveBtn className={css.reserveBtn} />
-				<button className={css.burgerBtn} type="button" onClick={() => setIsBurgerOpen(true)}>
+				<button
+					className={css.burgerBtn}
+					type="button"
+					// onClick={() => setIsBurgerOpen(true)}
+				>
 					☰
 				</button>
 			</Container>
