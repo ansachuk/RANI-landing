@@ -1,14 +1,22 @@
 .container {
-	margin-top: 80px;
+	margin-top: 50px;
+
+	@media (min-width: 768px) {
+		margin-top: 80px;
+	}
 }
 
 .list {
 	display: flex;
 	justify-content: space-between;
-	gap: 4px;
+	gap: 18px;
 
 	font-size: 16px;
 	font-weight: 500;
+
+	@media (max-width: 1199px) {
+		flex-direction: column;
+	}
 }
 
 .thumb {
@@ -43,7 +51,7 @@
 
 	h4 {
 		font-family: "Cormorant Garamond", serif;
-		font-size: 24px;
+		font-size: 22px;
 		font-weight: 900;
 
 		letter-spacing: -1px;
@@ -51,10 +59,18 @@
 		flex-grow: 1;
 
 		width: 60%;
+
+		@media (min-width: 768px) {
+			font-size: 26px;
+		}
 	}
 }
 
 .contactInfoContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
 	line-height: 1;
 }
 
@@ -65,7 +81,7 @@
 }
 
 .description {
-	font-size: 14px;
+	font-size: 16px;
 	width: 55%;
 }
 

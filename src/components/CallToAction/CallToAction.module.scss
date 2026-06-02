@@ -11,18 +11,28 @@
 .container {
 	display: flex;
 
+	justify-content: center;
 	align-items: center;
 }
 
 .wrapper {
-	flex-basis: 40%;
+	@media (min-width: 768px) {
+		flex-basis: 40%;
+	}
 
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
 	gap: 20px;
 }
 
 .imgWrapper {
+	@media (max-width: 767.98px) {
+		display: none;
+	}
+
 	flex-basis: 60%;
 
 	position: relative;
@@ -48,4 +58,5 @@
 	font-size: 36px;
 	font-family: "Cormorant Garamond", serif;
 	letter-spacing: -1px;
+	text-align: center;
 }

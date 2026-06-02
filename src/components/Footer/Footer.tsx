@@ -11,7 +11,7 @@ export default function Footer() {
 					<p className={css.regular}>Zasługujesz na to, by czuć sie soba na nowo.</p>
 					<p className={css.caramel}>Jestesmy tutaj, by Cię poprowadzic.</p>
 				</div>
-				<ReserveBtn />
+				<ReserveBtn className={css.reserveBtn} />
 			</Container>
 		</footer>
 	);

@@ -13,16 +13,16 @@ const advantagesData = [
 	{
 		icon: headLeft,
 		title: "Medycyna estetyczna",
-		description: "Zaawansowane technologie oparte na wiedzy i doswiadczeniu.",
+		description: "Zaawansowane technologie oparte na doświadczeniu.",
 	},
 	{
 		icon: lotus,
 		title: "Holistyczne podejście",
-		description: "Ciato, umysi i emocje w pelnej harmonii.",
+		description: "Ciało, umysł i emocje w pełnej harmonii.",
 	},
 	{
 		icon: sun,
-		title: "Świadoma troska o siebie",
+		title: "Troska o siebie",
 		description: "Przestrzen, w której odnajdziesz siebie na nowo.",
 	},
 	{

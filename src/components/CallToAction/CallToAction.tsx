@@ -11,7 +11,7 @@ export default function CallToAction() {
 			<Container className={css.container}>
 				<div className={css.wrapper}>
 					<h2 className={css.title}>Twoja podróż do równowagi zaczyna się tutaj.</h2>
-					<ReserveBtn />
+					<ReserveBtn className={css.reserveBtn} />
 				</div>
 				<div className={css.imgWrapper}>
 					<img src={candle} alt="candle" className={css.candle} />

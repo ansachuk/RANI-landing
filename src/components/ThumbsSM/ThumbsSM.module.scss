@@ -15,8 +15,13 @@
 
 .list {
 	display: flex;
-
+	flex-direction: column;
+	flex-wrap: wrap;
 	gap: 18px;
+
+	@media (min-width: 768px) {
+		flex-direction: row;
+	}
 }
 
 .thumb {
@@ -27,14 +32,28 @@
 		rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
 		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
-	flex-basis: calc((100% - (18px * 4)) / 5);
+	@media (min-width: 768px) and (max-width: 1023.98px) {
+		flex-basis: calc((100% / 2) - 18px);
+
+		&:nth-child(1) {
+			display: none;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		flex-basis: calc((100% - (18px * 4)) / 5);
+	}
 }
 
 .image {
-	height: 135px;
+	height: 350px;
 	width: 100%;
 	object-fit: cover;
 	object-position: top;
+
+	@media (min-width: 1024px) {
+		height: 150px;
+	}
 }
 
 .title {
