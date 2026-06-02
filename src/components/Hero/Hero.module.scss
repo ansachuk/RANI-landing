@@ -1,26 +1,65 @@
+.container {
+	@media (max-width: 699px) {
+		overflow: hidden;
+	}
+}
+
 .wrapper {
 	display: flex;
 	justify-content: space-between;
 	position: relative;
 
 	border-bottom: 1px solid #c19a5b7a;
+
+	padding-bottom: 90px;
+
+	@media (min-width: 900px) {
+		padding-bottom: 0;
+	}
 }
 
 .heroInfo {
-	margin-top: 64px;
+	margin-top: 45px;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 10px;
 
-	font-weight: 500;
+	font-weight: 600;
+
+	@media (min-width: 768px) {
+		margin-top: 64px;
+
+		font-weight: 500;
+
+		gap: 14px;
+	}
+
+	@media (min-width: 1200px) {
+		gap: 20px;
+	}
 }
 
 .title {
-	font-size: 72px;
+	font-size: 43px;
 	font-weight: bolder;
 	font-family: "Cormorant Garamond", serif;
 
 	letter-spacing: -2px;
+	line-height: 1.1;
+
+	@media (min-width: 400px) and (max-width: 899px) {
+		max-width: 60%;
+	}
+
+	@media (min-width: 768px) {
+		font-size: 56px;
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 72px;
+
+		line-height: 1.5;
+	}
 }
 
 .starWrapper {
@@ -31,30 +70,89 @@
 		position: absolute;
 		top: 48%;
 		left: 10px;
-		width: 150px;
+		width: 75px;
 		height: 1.5px;
 		background-color: #c19a5b;
+
+		@media (min-width: 768px) {
+			width: 150px;
+		}
 	}
 }
 
 .star {
 	margin-left: 20px;
+
+	width: 28px;
+	height: 28px;
+
+	@media (min-width: 768px) {
+		width: 36px;
+		height: 36px;
+	}
 }
 
 .desc {
-	font-size: 24px;
 	max-width: 60%;
+
+	@media (min-width: 768px) {
+		font-size: 18px;
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 24px;
+	}
 }
 
 .btnWrapper {
 	display: flex;
-	gap: 20px;
+	flex-direction: column;
+	gap: 10px;
+
+	max-width: 60%;
+
+	@media (min-width: 1024px) {
+		max-width: fit-content;
+	}
+
+	@media (min-width: 1200px) {
+		flex-direction: row;
+		gap: 20px;
+	}
+}
+
+.reserveBtn {
+	font-size: 14px;
+	padding: 16px 10px;
+	justify-content: center;
+
+	gap: 4px;
+
+	@media (min-width: 500px) {
+		font-size: 16px;
+		justify-content: space-between;
+		padding: 16px 22px;
+	}
+
+	@media (min-width: 768px) {
+		gap: 10px;
+	}
 }
 
 .approachLink {
-	padding: 16px 24px;
+	padding: 16px 10px;
 
-	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	text-align: center;
+
+	max-width: 265px;
+
+	height: 55px;
+
+	font-size: 14px;
 	font-weight: 500;
 	text-transform: uppercase;
 
@@ -62,28 +160,120 @@
 	border-radius: 8px;
 
 	color: #a1690e;
+
+	@media (min-width: 768px) {
+		font-size: 16px;
+
+		padding: 16px 16px;
+	}
 }
 
 .jasmine {
 	position: absolute;
-	bottom: -25%;
+
+	width: 80%;
+
+	// bottom: -25%;
+
+	bottom: -50px;
 	left: -20px;
 
-	z-index: -1;
+	z-index: -5;
 	pointer-events: none;
 
 	max-width: 700px;
+
+	@media (min-width: 400px) {
+		width: 70%;
+	}
+
+	@media (min-width: 450px) {
+		width: 65%;
+	}
+
+	@media (min-width: 500px) {
+		width: 60%;
+	}
+
+	@media (min-width: 550px) {
+		width: 55%;
+	}
+
+	@media (min-width: 600px) {
+		width: 50%;
+	}
+
+	@media (min-width: 650px) {
+		width: 45%;
+	}
+
+	@media (min-width: 700px) {
+		width: 55%;
+		bottom: -100px;
+	}
 
 	@media (min-width: 768px) {
 		left: -32px;
 	}
 
+	@media (min-width: 700px) {
+		width: 60%;
+		bottom: -150px;
+	}
+
+	@media (min-width: 950px) {
+		width: 65%;
+	}
+
 	@media (min-width: 1200px) {
+		width: 80%;
 		left: -75px;
+		bottom: -140px;
 	}
 }
 
 .arch {
-	width: 50%;
+	position: absolute;
+	right: -40%;
+	bottom: 0;
+	width: 70%;
+	z-index: -1;
+
 	max-width: 560px;
+
+	@media (min-width: 425px) {
+		right: -35%;
+	}
+
+	@media (min-width: 550px) {
+		right: -120px;
+
+		width: 350px;
+	}
+
+	@media (min-width: 640px) {
+		right: -30px;
+	}
+
+	@media (min-width: 700px) {
+		right: 0;
+	}
+
+	@media (min-width: 768px) {
+		width: 45%;
+		max-width: 400px;
+
+		right: 0;
+	}
+
+	@media (min-width: 900px) {
+		position: relative;
+		width: 50%;
+
+		max-width: 550px;
+	}
+
+	@media (min-width: 1200px) {
+		position: static;
+	}
 }

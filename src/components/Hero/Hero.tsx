@@ -9,23 +9,24 @@ import css from "./Hero.module.scss";
 
 export default function Hero() {
 	return (
-		<Container>
+		<Container className={css.container}>
 			<div className={css.wrapper}>
 				<div className={css.heroInfo}>
 					<h1 className={css.title}>Piękno w harmonii ciała i ducha</h1>
 					<div className={css.starWrapper}>
-						<img className={css.star} src={star} alt="Star" width={36} height={36} />
+						<img className={css.star} src={star} alt="Star" />
 					</div>
 
 					<p className={css.desc}>Nowoczesna regeneracja skóry i swiadoma troska o siebie.</p>
 					<div className={css.btnWrapper}>
-						<ReserveBtn />
+						<ReserveBtn className={css.reserveBtn} />
 						<a className={css.approachLink} href="#">
 							Nasze podejście
 						</a>
 					</div>
-					<img className={css.jasmine} src={jasmine} alt="Jasmine" />
 				</div>
+
+				<img className={css.jasmine} src={jasmine} alt="Jasmine" />
 
 				<img className={css.arch} src={arch} alt="Hero" />
 			</div>
