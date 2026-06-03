@@ -83,7 +83,15 @@
 	}
 
 	border-radius: 260px 260px 0 0;
-	box-shadow: 0 24px 80px rgba(129, 32, 67, 0.12);
+
+	@media (min-width: 992px) {
+		mask-image: linear-gradient(to rightс, transparent 0%, black 50%), linear-gradient(to bottom, transparent 0%, black 50%);
+
+		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%), linear-gradient(to bottom, transparent 0%, black 50%);
+
+		mask-composite: intersect;
+		-webkit-mask-composite: source-in;
+	}
 }
 
 .treatments {

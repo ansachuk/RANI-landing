@@ -1,17 +1,24 @@
 import Container from "../../components/Container/Container";
 import css from "./ContactPage.module.scss";
 
+import hero from "../../assets/images/contact/hero.webp";
+
+import call from "../../assets/svg/call.svg";
+import mail from "../../assets/svg/mail.svg";
+import pin from "../../assets/svg/pin.svg";
+import clock from "../../assets/svg/clock.svg";
+
 const contactItems = [
 	{
-		icon: "☎",
+		icon: call,
 		text: "+48 123 456 789",
 	},
 	{
-		icon: "✉",
+		icon: mail,
 		text: "kontakt@rani.pl",
 	},
 	{
-		icon: "◆",
+		icon: pin,
 		text: (
 			<>
 				ul. Orienta 18
@@ -21,7 +28,7 @@ const contactItems = [
 		),
 	},
 	{
-		icon: "◷",
+		icon: clock,
 		text: (
 			<>
 				Poniedziałek – Piątek: 9:00 – 20:00
@@ -59,7 +66,7 @@ export default function ContactPage() {
 							<ul className={css.contactList}>
 								{contactItems.map((item, index) => (
 									<li className={css.contactItem} key={index}>
-										<div className={css.icon}>{item.icon}</div>
+										<img className={css.icon} src={item.icon} alt="icon" />
 										<p>{item.text}</p>
 									</li>
 								))}
@@ -67,7 +74,7 @@ export default function ContactPage() {
 						</div>
 
 						<div className={css.imageWrap}>
-							<div className={css.heroImage}>PHOTO</div>
+							<img className={css.heroImage} src={hero} alt="Contact hero" />
 						</div>
 					</div>
 				</Container>

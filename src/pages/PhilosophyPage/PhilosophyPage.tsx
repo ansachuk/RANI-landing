@@ -1,55 +1,73 @@
 import Container from "../../components/Container/Container";
+import ReserveBtn from "../../components/ReserveBtn/ReserveBtn";
+
 import css from "./PhilosophyPage.module.scss";
+
+import hero from "../../assets/images/philosophy/hero.webp";
+import effect from "../../assets/images/philosophy/effect.webp";
+import icon1 from "../../assets/images/philosophy/icon1.webp";
+import icon2 from "../../assets/images/philosophy/icon2.webp";
+import icon3 from "../../assets/images/philosophy/icon3.webp";
+import icon4 from "../../assets/images/philosophy/icon4.webp";
+import icon5 from "../../assets/images/philosophy/icon5.webp";
+import icon6 from "../../assets/images/philosophy/icon6.webp";
+import icon7 from "../../assets/images/philosophy/icon7.webp";
+
+import hands from "../../assets/images/about/hands.webp";
+import crown from "../../assets/images/about/crown.webp";
+import lotus from "../../assets/images/lotus.webp";
+import headLeft from "../../assets/images/head-left.webp";
+import sun from "../../assets/images/sun.webp";
 
 const improvements = [
 	{
-		icon: "◯",
+		icon: icon1,
 		text: "poprawę owalu twarzy",
 	},
 	{
-		icon: "≋",
+		icon: icon2,
 		text: "wygładzenie bruzd i cieni",
 	},
 	{
-		icon: "♧",
+		icon: icon3,
 		text: "uniesienie policzków i środkowej części twarzy",
 	},
 	{
-		icon: "✧",
+		icon: icon4,
 		text: "przywrócenie bardziej świeżego i wypoczętego wyglądu",
 	},
 	{
-		icon: "⌣",
+		icon: icon5,
 		text: "poprawę linii żuchwy",
 	},
 	{
-		icon: "⚖",
+		icon: icon6,
 		text: "poprawę proporcji i harmonii twarzy",
 	},
 	{
-		icon: "∪",
+		icon: icon7,
 		text: "zmniejszenie efektu „opadania” tkanek",
 	},
 ];
 
 const values = [
 	{
-		icon: "♕",
+		icon: headLeft,
 		title: "HOLISTYCZNE PODEJŚCIE",
 		text: "Łączymy wiedzę medyczną z troską o ciało, umysł i emocje.",
 	},
 	{
-		icon: "✺",
+		icon: lotus,
 		title: "NATURALNE PIĘKNO",
 		text: "Wydobywamy Twoje piękno, podkreślając to, co wyjątkowe.",
 	},
 	{
-		icon: "☼",
+		icon: sun,
 		title: "NOWOCZESNE TECHNOLOGIE",
 		text: "Pracujemy na sprawdzonych i bezpiecznych rozwiązaniach.",
 	},
 	{
-		icon: "♡",
+		icon: hands,
 		title: "TROSKA O CIEBIE",
 		text: "Tworzymy przestrzeń, w której możesz poczuć się sobą.",
 	},
@@ -80,7 +98,7 @@ export default function PhilosophyPage() {
 							<p className={css.script}>Piękno w harmonii.</p>
 						</div>
 
-						<div className={css.heroImage}>PHOTO</div>
+						<img className={css.heroImage} src={hero} alt="Hero" />
 					</div>
 				</Container>
 			</section>
@@ -117,7 +135,7 @@ export default function PhilosophyPage() {
 								</div>
 							</div>
 
-							<div className={css.decorPhoto}>PHOTO</div>
+							<img className={css.decorPhoto} src={effect} alt="vase with candle" />
 						</div>
 
 						<div className={css.rightColumn}>
@@ -128,7 +146,8 @@ export default function PhilosophyPage() {
 								<div className={css.improvementsGrid}>
 									{improvements.map((item, index) => (
 										<div className={css.improvementItem} key={index}>
-											<div className={css.improvementIcon}>{item.icon}</div>
+											<img className={css.improvementIcon} src={item.icon} alt={item.text} />
+
 											<p>{item.text}</p>
 										</div>
 									))}
@@ -148,7 +167,9 @@ export default function PhilosophyPage() {
 								<p>Celem zabiegu jest subtelne odmłodzenie oraz przywrócenie twarzy świeżości i struktury, a nie stworzenie sztucznego efektu.</p>
 
 								<div className={css.infoBox}>
-									<div className={css.infoIcon}>♕</div>
+									<div className={css.infoIcon}>
+										<img src={crown} alt="Korona" />
+									</div>
 									<p>
 										Każda twarz starzeje się inaczej, dlatego plan terapii zawsze dobierany jest indywidualnie — z uwzględnieniem anatomii, jakości
 										skóry oraz oczekiwanego efektu.
@@ -165,16 +186,15 @@ export default function PhilosophyPage() {
 					<div className={css.ctaTop}>
 						<div className={css.line} />
 						<h2>Gotowa na zmianę, która przywraca harmonię?</h2>
-						<a href="#contact" className={css.button}>
-							ZAREZERWUJ KONSULTACJĘ ✥
-						</a>
+						<ReserveBtn />
 						<div className={css.line} />
 					</div>
 
 					<div className={css.valuesGrid}>
 						{values.map((item, index) => (
 							<div className={css.valueCard} key={index}>
-								<div className={css.valueIcon}>{item.icon}</div>
+								<img className={css.valueIcon} src={item.icon} alt={item.title} />
+
 								<h3>{item.title}</h3>
 								<p>{item.text}</p>
 							</div>

@@ -6,6 +6,7 @@ import arch from "../../assets/images/arch.webp";
 import jasmine from "../../assets/images/jasmine.webp";
 
 import css from "./Hero.module.scss";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
 	return (
@@ -20,9 +21,9 @@ export default function Hero() {
 					<p className={css.desc}>Nowoczesna regeneracja skóry i swiadoma troska o siebie.</p>
 					<div className={css.btnWrapper}>
 						<ReserveBtn className={css.reserveBtn} />
-						<a className={css.approachLink} href="#">
+						<Link className={css.approachLink} to="/RANI-landing/about">
 							Nasze podejście
-						</a>
+						</Link>
 					</div>
 				</div>
 
