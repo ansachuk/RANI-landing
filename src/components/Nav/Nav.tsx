@@ -6,17 +6,24 @@ export default function Nav() {
 		<nav>
 			<ul className={css.navList}>
 				<li>
-					<NavLink to="/RANI-landing/about">O nas</NavLink>
+					<NavLink className={({ isActive }) => (isActive ? `${css.navLink} ${css.active}` : css.navLink)} to="/RANI-landing/about">
+						<span> O nas</span>
+					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/RANI-landing/treatment">Zabiegi</NavLink>
+					<NavLink className={({ isActive }) => (isActive ? `${css.navLink} ${css.active}` : css.navLink)} to="/RANI-landing/treatment">
+						<span>Zabiegi</span>
+					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/RANI-landing/philosophy">Filozofia</NavLink>
+					<NavLink className={({ isActive }) => (isActive ? `${css.navLink} ${css.active}` : css.navLink)} to="/RANI-landing/philosophy">
+						<span>Filozofia</span>
+					</NavLink>
 				</li>
-
 				<li>
-					<NavLink to="/RANI-landing/contact">Kontakt</NavLink>
+					<NavLink className={({ isActive }) => (isActive ? `${css.navLink} ${css.active}` : css.navLink)} to="/RANI-landing/contact">
+						<span>Kontakt</span>
+					</NavLink>
 				</li>
 			</ul>
 		</nav>

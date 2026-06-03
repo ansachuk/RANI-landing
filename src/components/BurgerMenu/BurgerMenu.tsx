@@ -1,3 +1,46 @@
-export default function BurgerMenu() {
-	return <div>BurgerMenu</div>;
+import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
+import css from "./BurgerMenu.module.scss";
+
+export default function BurgerMenu({ isOpen, onClose }) {
+	useEffect(() => {
+		document.body.style.overflow = isOpen ? "hidden" : "";
+
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [isOpen]);
+
+	const getNavLinkClass = ({ isActive }) => (isActive ? `${css.navLink} ${css.active}` : css.navLink);
+
+	return (
+		<div className={`${css.burgerMenu} ${isOpen ? css.open : ""}`}>
+			<button className={css.closeBtn} type="button" onClick={onClose} aria-label="Close menu">
+				×
+			</button>
+
+			<nav className={css.nav}>
+				<NavLink end className={getNavLinkClass} to="/RANI-landing" onClick={onClose}>
+					<span>Home</span>
+				</NavLink>
+
+				<NavLink className={getNavLinkClass} to="/RANI-landing/about" onClick={onClose}>
+					<span>O nas</span>
+				</NavLink>
+
+				<NavLink className={getNavLinkClass} to="/RANI-landing/treatment" onClick={onClose}>
+					<span>Zabiegi</span>
+				</NavLink>
+
+				<NavLink className={getNavLinkClass} to="/RANI-landing/philosophy" onClick={onClose}>
+					<span>Filozofia</span>
+				</NavLink>
+
+				<NavLink className={getNavLinkClass} to="/RANI-landing/contact" onClick={onClose}>
+					<span>Kontakt</span>
+				</NavLink>
+			</nav>
+		</div>
+	);
 }

@@ -1,12 +1,12 @@
 .navList {
 	list-style: none;
 	display: flex;
-	gap: 10px;
+	gap: 20px;
 
 	font-size: 18px;
 
 	li {
-		padding: 0 20px;
+		padding: 0 20px 0 10px;
 
 		&:not(:last-child) {
 			border-right: 1px solid #c19a5b;
@@ -15,5 +15,93 @@
 
 	@media (max-width: 1199px) {
 		display: none;
+	}
+}
+
+.navLink {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+
+	color: inherit;
+	text-decoration: none;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -11.5px;
+		left: 0;
+
+		width: 90%;
+		height: 1px;
+		border-radius: 999px;
+		background-color: #b97832;
+
+		opacity: 0;
+		transform: scaleX(0);
+		transform-origin: left center;
+
+		transition:
+			opacity 0.3s ease,
+			transform 0.45s ease;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -13px;
+		left: 0;
+
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: #b97832;
+
+		opacity: 0;
+		transition:
+			opacity 0.3s ease,
+			left 0.45s ease;
+	}
+
+	span {
+		position: relative;
+	}
+
+	span::before {
+		content: "";
+		position: absolute;
+		bottom: -13px;
+		left: 0;
+
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: #b97832;
+
+		opacity: 0;
+		transition:
+			opacity 0.3s ease,
+			transform 0.45s ease;
+	}
+
+	&::after {
+		transform: translateX(0);
+	}
+
+	&:hover,
+	&.active {
+		&::before {
+			opacity: 1;
+			transform: scaleX(1);
+		}
+
+		span::before,
+		&::after {
+			opacity: 1;
+		}
+
+		&::after {
+			left: 90%;
+		}
 	}
 }

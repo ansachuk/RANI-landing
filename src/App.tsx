@@ -1,15 +1,15 @@
-import { Suspense } from "react";
-import { Route, Routes, Outlet } from "react-router-dom";
+import { Suspense, lazy } from "react";
+import { Route, Routes, Outlet, Navigate } from "react-router-dom";
 
-import AboutPage from "./pages/AboutPage/AboutPage";
-import TreatmentPage from "./pages/TreatmentPage/TreatmentPage";
-import PhilosophyPage from "./pages/PhilosophyPage/PhilosophyPage";
-import ContactPage from "./pages/ContactPage/ContactPage";
+import HomePage from "./pages/HomePage/HomePage";
+
+const AboutPage = lazy(() => import("./pages/AboutPage/AboutPage"));
+const TreatmentPage = lazy(() => import("./pages/TreatmentPage/TreatmentPage"));
+const PhilosophyPage = lazy(() => import("./pages/PhilosophyPage/PhilosophyPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage/ContactPage"));
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-
-import HomePage from "./pages/HomePage/HomePage";
 
 import "./App.scss";
 
@@ -24,6 +24,8 @@ function App() {
 					<Route path="philosophy" element={<PhilosophyPage />} />
 					<Route path="contact" element={<ContactPage />} />
 				</Route>
+
+				<Route path="*" element={<Navigate to="/RANI-landing`" replace />} />
 			</Routes>
 		</>
 	);
