@@ -1,0 +1,253 @@
+.page {
+	font-family: "Montserrat", sans-serif;
+	overflow: hidden;
+}
+
+.hero {
+	position: relative;
+	padding: 116px 0 74px;
+	min-height: calc(100vh - 120px);
+	display: flex;
+	align-items: center;
+}
+
+.heroInner {
+	display: grid;
+	grid-template-columns: 0.82fr 1.18fr;
+	align-items: center;
+	gap: 54px;
+}
+
+.content {
+	position: relative;
+	z-index: 2;
+	padding-left: 4px;
+}
+
+.content h1 {
+	margin-bottom: 34px;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 70px;
+	font-weight: 500;
+	line-height: 0.98;
+	letter-spacing: -0.03em;
+}
+
+.decorLine {
+	position: relative;
+	width: 140px;
+	height: 1px;
+	margin-bottom: 52px;
+	background: #c67a36;
+
+	&::after {
+		content: "✥";
+		position: absolute;
+		top: 50%;
+		left: 24px;
+		transform: translateY(-50%);
+		padding: 0 8px;
+		background: #fff7ee;
+		color: #c67a36;
+		font-size: 15px;
+	}
+}
+
+.description {
+	margin-bottom: 36px;
+	font-size: 21px;
+	line-height: 1.55;
+}
+
+.script {
+	margin-bottom: 54px;
+	font-family: "Caramel", cursive;
+	font-size: 40px;
+	line-height: 1;
+	color: #812043;
+}
+
+.contactList {
+	display: grid;
+	gap: 28px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.contactItem {
+	display: grid;
+	grid-template-columns: 68px 1fr;
+	align-items: center;
+	gap: 24px;
+
+	p {
+		font-size: 18px;
+		line-height: 1.45;
+	}
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 68px;
+	height: 68px;
+	border: 1px solid #c67a36;
+	border-radius: 50%;
+	color: #c67a36;
+	font-size: 30px;
+	line-height: 1;
+}
+
+.imageWrap {
+	position: relative;
+	min-height: 720px;
+}
+
+.heroImage {
+	position: absolute;
+	inset: 0 -120px 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #a3ff12;
+	color: #812043;
+	font-weight: 700;
+	letter-spacing: 0.16em;
+	border-radius: 260px 0 0 260px;
+	box-shadow: 0 24px 80px rgba(129, 32, 67, 0.12);
+}
+
+/* легкий декоративний “візерунок”, щоб було ближче до макета */
+.hero::before,
+.hero::after {
+	content: "";
+	position: absolute;
+	width: 240px;
+	height: 240px;
+	border: 1px solid rgba(198, 122, 54, 0.22);
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+.hero::before {
+	left: -120px;
+	bottom: -80px;
+}
+
+.hero::after {
+	right: -120px;
+	bottom: -80px;
+}
+
+@media (max-width: 1199.98px) {
+	.content h1 {
+		font-size: 60px;
+	}
+
+	.heroInner {
+		gap: 38px;
+	}
+
+	.imageWrap {
+		min-height: 640px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.hero {
+		padding: 72px 0 56px;
+		min-height: auto;
+	}
+
+	.heroInner {
+		grid-template-columns: 1fr;
+	}
+
+	.content {
+		max-width: 620px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.decorLine {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.description {
+		br {
+			display: none;
+		}
+	}
+
+	.contactList {
+		max-width: 430px;
+		margin: 0 auto;
+		text-align: left;
+	}
+
+	.imageWrap {
+		min-height: 480px;
+	}
+
+	.heroImage {
+		position: static;
+		height: 480px;
+		border-radius: 240px 240px 20px 20px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.hero {
+		padding: 48px 0 42px;
+	}
+
+	.content h1 {
+		margin-bottom: 26px;
+		font-size: 44px;
+	}
+
+	.decorLine {
+		margin-bottom: 34px;
+	}
+
+	.description {
+		margin-bottom: 28px;
+		font-size: 17px;
+	}
+
+	.script {
+		margin-bottom: 38px;
+		font-size: 36px;
+	}
+
+	.contactList {
+		gap: 22px;
+	}
+
+	.contactItem {
+		grid-template-columns: 56px 1fr;
+		gap: 16px;
+
+		p {
+			font-size: 15px;
+		}
+	}
+
+	.icon {
+		width: 56px;
+		height: 56px;
+		font-size: 25px;
+	}
+
+	.imageWrap {
+		min-height: auto;
+	}
+
+	.heroImage {
+		height: 340px;
+		border-radius: 180px 180px 18px 18px;
+	}
+}

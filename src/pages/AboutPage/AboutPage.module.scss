@@ -1,0 +1,372 @@
+.aboutPage {
+	font-family: "Montserrat", sans-serif;
+	overflow: hidden;
+}
+
+.hero {
+	padding: 70px 0 40px;
+}
+
+.heroInner {
+	display: grid;
+	grid-template-columns: 1fr 1.15fr;
+	align-items: center;
+	gap: 48px;
+	min-height: 440px;
+}
+
+.heroContent {
+	max-width: 560px;
+
+	h1 {
+		margin-bottom: 24px;
+		font-family: "Cormorant Garamond", serif;
+		font-size: 56px;
+		font-weight: 500;
+		line-height: 1.05;
+		letter-spacing: 0.02em;
+	}
+
+	p {
+		font-family: "Cormorant Garamond", serif;
+		font-size: 30px;
+		line-height: 1.35;
+	}
+}
+
+.heroImage,
+.storyImage,
+.truthImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #a3ff12;
+	color: #812043;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	border-radius: 20px;
+	box-shadow: 0 20px 60px rgba(129, 32, 67, 0.12);
+}
+
+.heroImage {
+	height: 470px;
+	border-radius: 260px 260px 20px 20px;
+}
+
+.decorLine {
+	width: 120px;
+	height: 1px;
+	margin-top: 34px;
+	background: #c67a36;
+	position: relative;
+
+	&::after {
+		content: "✥";
+		position: absolute;
+		top: 50%;
+		left: 18px;
+		transform: translateY(-50%);
+		color: #c67a36;
+		background: #fff7ee;
+		padding: 0 8px;
+		font-size: 15px;
+	}
+}
+
+.intro {
+	padding: 52px 0 64px;
+}
+
+.introText {
+	max-width: 720px;
+	margin: 0 auto 64px;
+	text-align: center;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 30px;
+	line-height: 1.18;
+}
+
+.valuesGrid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 36px;
+}
+
+.valueCard {
+	text-align: center;
+	padding: 10px 34px;
+
+	&:not(:last-child) {
+		border-right: 1px solid rgba(198, 122, 54, 0.4);
+	}
+
+	h3 {
+		margin-bottom: 18px;
+		font-family: "Cormorant Garamond", serif;
+		font-size: 23px;
+		font-weight: 500;
+		line-height: 1.15;
+	}
+
+	p {
+		font-size: 15px;
+		line-height: 1.7;
+	}
+}
+
+.valueIcon {
+	margin-bottom: 20px;
+	color: #c67a36;
+	font-size: 52px;
+	line-height: 1;
+}
+
+.story {
+	padding: 10px 0 0;
+}
+
+.storyCard {
+	display: grid;
+	grid-template-columns: 1fr 1.08fr;
+	overflow: hidden;
+	border-radius: 18px;
+	background: #fff1e3;
+}
+
+.storyImage {
+	min-height: 360px;
+	border-radius: 0;
+}
+
+.storyContent {
+	padding: 48px 56px;
+
+	p {
+		font-size: 16px;
+		line-height: 1.75;
+	}
+}
+
+.storyTitle {
+	margin-bottom: 14px;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 28px !important;
+	line-height: 1.25 !important;
+}
+
+.caramel {
+	font-family: "Caramel", cursive;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 1.05;
+	color: #812043;
+}
+
+.truth {
+	padding: 0 0 32px;
+}
+
+.truthCard {
+	display: grid;
+	grid-template-columns: 0.9fr 1.4fr;
+	overflow: hidden;
+	border-radius: 0 0 18px 18px;
+	background: #fff4e8;
+}
+
+.truthContent {
+	padding: 42px 44px;
+
+	h2 {
+		margin-bottom: 16px;
+		font-family: "Cormorant Garamond", serif;
+		font-size: 30px;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+
+	p {
+		font-size: 15px;
+		line-height: 1.8;
+	}
+}
+
+.truthLead {
+	margin-bottom: 8px;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 22px !important;
+	line-height: 1.4 !important;
+}
+
+.smallIcon {
+	margin-bottom: 16px;
+	color: #c67a36;
+	font-size: 48px;
+}
+
+.truthImage {
+	min-height: 350px;
+	border-radius: 0;
+}
+
+.final {
+	padding: 0 0 54px;
+	text-align: center;
+
+	h2 {
+		font-family: "Cormorant Garamond", serif;
+		font-size: 42px;
+		font-weight: 500;
+		line-height: 1.1;
+	}
+
+	.caramel {
+		font-size: 56px;
+	}
+}
+
+.finalLine {
+	height: 1px;
+	margin: 22px 0 28px;
+	background: rgba(198, 122, 54, 0.35);
+}
+
+.bottomGrid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 18px;
+}
+
+.bottomItem {
+	padding: 0 18px;
+
+	&:not(:last-child) {
+		border-right: 1px solid rgba(198, 122, 54, 0.35);
+	}
+
+	p {
+		font-size: 13px;
+		line-height: 1.4;
+	}
+}
+
+.bottomIcon {
+	margin-bottom: 10px;
+	color: #c67a36;
+	font-size: 30px;
+}
+
+@media (max-width: 991.98px) {
+	.heroInner,
+	.storyCard,
+	.truthCard {
+		grid-template-columns: 1fr;
+	}
+
+	.heroContent {
+		text-align: center;
+		margin: 0 auto;
+
+		h1 {
+			font-size: 44px;
+		}
+
+		p {
+			font-size: 26px;
+		}
+	}
+
+	.decorLine {
+		margin-inline: auto;
+	}
+
+	.heroImage {
+		height: 420px;
+	}
+
+	.valuesGrid {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+
+	.valueCard {
+		border-right: none !important;
+		border-bottom: 1px solid rgba(198, 122, 54, 0.3);
+		padding-bottom: 28px;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	.bottomGrid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.bottomItem {
+		border-right: none !important;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.hero {
+		padding: 44px 0 30px;
+	}
+
+	.heroInner {
+		gap: 32px;
+		min-height: auto;
+	}
+
+	.heroContent {
+		h1 {
+			font-size: 38px;
+		}
+
+		p {
+			font-size: 23px;
+		}
+	}
+
+	.heroImage {
+		height: 360px;
+		border-radius: 180px 180px 18px 18px;
+	}
+
+	.intro {
+		padding: 42px 0;
+	}
+
+	.introText {
+		margin-bottom: 42px;
+		font-size: 25px;
+	}
+
+	.storyContent,
+	.truthContent {
+		padding: 34px 24px;
+	}
+
+	.storyTitle {
+		font-size: 25px !important;
+	}
+
+	.caramel {
+		font-size: 42px;
+	}
+
+	.final {
+		h2 {
+			font-size: 34px;
+		}
+
+		.caramel {
+			font-size: 48px;
+		}
+	}
+
+	.bottomGrid {
+		grid-template-columns: 1fr;
+		gap: 22px;
+	}
+}

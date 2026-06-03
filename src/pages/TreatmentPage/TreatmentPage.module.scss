@@ -1,0 +1,451 @@
+.page {
+	font-family: "Montserrat", sans-serif;
+	overflow: hidden;
+}
+
+.hero {
+	padding: 58px 0 0;
+}
+
+.heroInner {
+	display: grid;
+	grid-template-columns: 0.92fr 1.08fr;
+	gap: 48px;
+	align-items: end;
+}
+
+.heroText {
+	padding-bottom: 34px;
+
+	p {
+		max-width: 565px;
+		margin-bottom: 18px;
+		font-size: 15px;
+		line-height: 1.65;
+	}
+}
+
+.overline {
+	margin-bottom: 8px !important;
+	color: #c67a36;
+	font-size: 14px !important;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.smallDecor {
+	width: 115px;
+	height: 1px;
+	margin-bottom: 28px;
+	background: #c67a36;
+}
+
+.heroText h1 {
+	margin-bottom: 16px;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 76px;
+	font-weight: 500;
+	line-height: 0.95;
+	letter-spacing: 0.02em;
+}
+
+.script {
+	max-width: 560px !important;
+	margin-bottom: 28px !important;
+	font-family: "Caramel", cursive;
+	font-size: 42px !important;
+	line-height: 1.05 !important;
+	color: #812043;
+}
+
+.note {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	max-width: 565px;
+	margin-top: 22px;
+	padding-top: 20px;
+	border-top: 1px solid rgba(198, 122, 54, 0.38);
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.noteIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 54px;
+	height: 54px;
+	flex-shrink: 0;
+	border: 1px solid #c67a36;
+	border-radius: 50%;
+	color: #c67a36;
+	font-size: 28px;
+}
+
+.heroImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 610px;
+	background: #a3ff12;
+	color: #812043;
+	font-weight: 700;
+	letter-spacing: 0.16em;
+	border-radius: 260px 260px 0 0;
+	box-shadow: 0 24px 80px rgba(129, 32, 67, 0.12);
+}
+
+.treatments {
+	padding: 18px 0 36px;
+}
+
+.cards {
+	display: grid;
+	gap: 18px;
+}
+
+.treatmentCard {
+	display: grid;
+	grid-template-columns: 350px 1fr 245px;
+	gap: 26px;
+	padding: 16px;
+	border: 1px solid rgba(198, 122, 54, 0.35);
+	border-radius: 20px;
+	background: rgba(255, 248, 238, 0.92);
+}
+
+.photoBox {
+	position: relative;
+	min-height: 420px;
+}
+
+.photo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	min-height: 420px;
+	background: #a3ff12;
+	color: #812043;
+	font-weight: 700;
+	letter-spacing: 0.16em;
+	border-radius: 12px;
+}
+
+.floatingCard {
+	position: absolute;
+	left: 22px;
+	right: 22px;
+	bottom: 28px;
+	display: grid;
+	grid-template-columns: 48px 1fr;
+	gap: 14px;
+	padding: 20px;
+	border-radius: 14px;
+	background: rgba(255, 247, 238, 0.94);
+	box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+
+	h3 {
+		margin-bottom: 6px;
+		font-family: "Cormorant Garamond", serif;
+		font-size: 26px;
+		font-weight: 500;
+	}
+
+	p {
+		color: #c67a36;
+		font-size: 11px;
+		line-height: 1.35;
+		letter-spacing: 0.04em;
+	}
+}
+
+.floatingIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 46px;
+	height: 46px;
+	border: 1px solid #c67a36;
+	border-radius: 50%;
+	color: #c67a36;
+	font-size: 24px;
+}
+
+.mainContent {
+	padding: 8px 0 0;
+
+	p {
+		margin-bottom: 18px;
+		font-size: 14px;
+		line-height: 1.65;
+	}
+}
+
+.titleRow {
+	display: grid;
+	grid-template-columns: 46px 1fr;
+	gap: 20px;
+	margin-bottom: 20px;
+
+	span {
+		font-family: "Cormorant Garamond", serif;
+		font-size: 34px;
+		color: #c67a36;
+	}
+
+	h2 {
+		font-family: "Cormorant Garamond", serif;
+		font-size: 32px;
+		font-weight: 500;
+		line-height: 1.12;
+	}
+}
+
+.mainContent h4 {
+	margin: 22px 0 12px;
+	color: #812043;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+}
+
+.mainContent ul {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 8px 24px;
+	margin-bottom: 20px;
+	padding-left: 18px;
+
+	li {
+		font-size: 13px;
+		line-height: 1.45;
+
+		&::marker {
+			color: #c67a36;
+		}
+	}
+}
+
+.sideBox {
+	padding: 22px 0 0 28px;
+	border-left: 1px solid rgba(198, 122, 54, 0.35);
+
+	h3 {
+		margin-bottom: 18px;
+		font-family: "Cormorant Garamond", serif;
+		font-size: 25px;
+		font-weight: 500;
+		line-height: 1.18;
+	}
+
+	p {
+		font-size: 13px;
+		line-height: 1.65;
+	}
+}
+
+.sideIcon {
+	margin: 0 auto 22px;
+	color: #c67a36;
+	font-size: 64px;
+	text-align: center;
+}
+
+.cta {
+	padding: 18px 0 46px;
+}
+
+.ctaTop {
+	display: grid;
+	grid-template-columns: 1fr auto auto 1fr;
+	align-items: center;
+	gap: 28px;
+	margin-bottom: 30px;
+	text-align: center;
+
+	h2 {
+		font-family: "Cormorant Garamond", serif;
+		font-size: 27px;
+		font-weight: 500;
+	}
+
+	p {
+		font-family: "Caramel", cursive;
+		font-size: 34px;
+		line-height: 1;
+		color: #812043;
+	}
+}
+
+.line {
+	height: 1px;
+	background: rgba(198, 122, 54, 0.35);
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 46px;
+	padding: 0 30px;
+	border-radius: 5px;
+	background: #8a1746;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 700;
+	text-decoration: none;
+	letter-spacing: 0.04em;
+}
+
+.benefits {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0;
+	border-top: 1px solid rgba(198, 122, 54, 0.3);
+	padding-top: 24px;
+}
+
+.benefit {
+	display: grid;
+	grid-template-columns: 54px 1fr;
+	gap: 14px;
+	align-items: center;
+	padding: 0 24px;
+	border-right: 1px solid rgba(198, 122, 54, 0.3);
+
+	&:last-child {
+		border-right: none;
+	}
+
+	p {
+		font-size: 13px;
+		line-height: 1.45;
+	}
+}
+
+.benefitIcon {
+	color: #c67a36;
+	font-size: 38px;
+}
+
+@media (max-width: 1199.98px) {
+	.treatmentCard {
+		grid-template-columns: 300px 1fr;
+	}
+
+	.sideBox {
+		grid-column: 1 / -1;
+		padding: 24px 0 0;
+		border-left: none;
+		border-top: 1px solid rgba(198, 122, 54, 0.35);
+	}
+}
+
+@media (max-width: 991.98px) {
+	.heroInner {
+		grid-template-columns: 1fr;
+	}
+
+	.heroText {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.heroText p,
+	.note {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.smallDecor {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.heroImage {
+		height: 470px;
+	}
+
+	.treatmentCard {
+		grid-template-columns: 1fr;
+	}
+
+	.ctaTop {
+		grid-template-columns: 1fr;
+	}
+
+	.line {
+		display: none;
+	}
+
+	.benefits {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px 0;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.hero {
+		padding-top: 42px;
+	}
+
+	.heroText h1 {
+		font-size: 56px;
+	}
+
+	.script {
+		font-size: 36px !important;
+	}
+
+	.heroImage {
+		height: 360px;
+		border-radius: 180px 180px 0 0;
+	}
+
+	.note {
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.treatmentCard {
+		padding: 10px;
+	}
+
+	.photo,
+	.photoBox {
+		min-height: 340px;
+	}
+
+	.floatingCard {
+		left: 14px;
+		right: 14px;
+		bottom: 16px;
+	}
+
+	.titleRow {
+		grid-template-columns: 1fr;
+		gap: 8px;
+	}
+
+	.titleRow h2 {
+		font-size: 28px;
+	}
+
+	.mainContent ul {
+		grid-template-columns: 1fr;
+	}
+
+	.benefits {
+		grid-template-columns: 1fr;
+	}
+
+	.benefit {
+		border-right: none;
+		padding: 0;
+	}
+}
