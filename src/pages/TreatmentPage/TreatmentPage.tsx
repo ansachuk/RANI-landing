@@ -1,28 +1,45 @@
 import Container from "../../components/Container/Container";
+
+import face from "../../assets/images/treatment/face.webp";
+import first from "../../assets/images/treatment/first.webp";
+import second from "../../assets/images/treatment/second.webp";
+import hero from "../../assets/images/treatment/hero.webp";
+
+import crown from "../../assets/images/about/crown.webp";
+import hands from "../../assets/images/about/hands.webp";
+import rectStar from "../../assets/images/about/rect-star.webp";
+import lotus from "../../assets/images/lotus.webp";
+import headLeft from "../../assets/images/head-left.webp";
+import sun from "../../assets/images/sun.webp";
+
 import css from "./TreatmentPage.module.scss";
 
 const treatments = [
 	{
 		num: "01",
+		image: first,
 		name: "Laser tulowy — terapia przebarwień, blasku i fotostarzenia",
 		cardTitle: "Rani Thulium Glow",
 		sideTitle: "Laser tulowy — efekt glow, baby face i rozświetlenia skóry",
-		icon: "✦",
+		iconSM: rectStar,
+		iconLG: face,
 	},
 	{
 		num: "02",
+		image: second,
 		name: "Laser erbowo-szklany — nieablacyjna przebudowa skóry",
 		cardTitle: "Rani Collagen Renewal",
 		sideTitle: "Dla kogo?",
-		icon: "✺",
+		iconSM: hands,
+		iconLG: lotus,
 	},
 ];
 
 const benefits = [
-	"Konsultacja i plan terapii dopasowany do skóry",
-	"Nowoczesne technologie laserowe",
-	"Bezpieczeństwo i komfort na każdym etapie",
-	"Naturalne efekty, regeneracja i zdrowy wygląd skóry",
+	{ title: "Konsultacja i plan terapii dopasowany do skóry", icon: headLeft },
+	{ title: "Nowoczesne technologie laserowe", icon: lotus },
+	{ title: "Bezpieczeństwo i komfort na każdym etapie", icon: sun },
+	{ title: "Naturalne efekty, regeneracja i zdrowy wygląd skóry", icon: hands },
 ];
 
 export default function TreatmentPage() {
@@ -32,9 +49,6 @@ export default function TreatmentPage() {
 				<Container>
 					<div className={css.heroInner}>
 						<div className={css.heroText}>
-							<p className={css.overline}>ZABIEGI</p>
-							<div className={css.smallDecor} />
-
 							<h1>LASERY</h1>
 
 							<p className={css.script}>technologie prowadzące skórę przez proces odbudowy</p>
@@ -55,7 +69,9 @@ export default function TreatmentPage() {
 							</p>
 
 							<div className={css.note}>
-								<div className={css.noteIcon}>♕</div>
+								<div className={css.noteIcon}>
+									<img src={crown} alt="crown" />
+								</div>
 								<p>
 									Naszą filozofią nie jest agresywna zmiana twarzy, ale inteligentna regeneracja skóry — tak, aby wyglądała zdrowiej, świeżej i
 									bardziej harmonijnie.
@@ -63,7 +79,9 @@ export default function TreatmentPage() {
 							</div>
 						</div>
 
-						<div className={css.heroImage}>PHOTO</div>
+						<div className={css.heroImage}>
+							<img src={hero} alt="hero" />
+						</div>
 					</div>
 				</Container>
 			</section>
@@ -74,10 +92,14 @@ export default function TreatmentPage() {
 						{treatments.map(item => (
 							<article className={css.treatmentCard} key={item.num}>
 								<div className={css.photoBox}>
-									<div className={css.photo}>PHOTO</div>
+									<div className={css.photo}>
+										<img src={item.image} alt={item.name} />
+									</div>
 
 									<div className={css.floatingCard}>
-										<div className={css.floatingIcon}>{item.icon}</div>
+										<div className={css.floatingIcon}>
+											<img src={item.iconSM} alt={item.name} />
+										</div>
 										<div>
 											<h3>{item.cardTitle}</h3>
 											<p>LASEROWA TERAPIA BLASKU, PRZEBARWIEŃ I FOTOSTARZENIA</p>
@@ -113,7 +135,8 @@ export default function TreatmentPage() {
 								</div>
 
 								<aside className={css.sideBox}>
-									<div className={css.sideIcon}>{item.icon}</div>
+									<img className={css.sideIcon} src={item.iconLG} alt={item.sideTitle} />
+
 									<h3>{item.sideTitle}</h3>
 									<p>
 										Skóra może wyglądać na bardziej miękką, jednolitą, promienną i wygładzoną — jak po dobrze przespanej nocy, wakacjach i idealnej
@@ -129,22 +152,17 @@ export default function TreatmentPage() {
 			<section className={css.cta}>
 				<Container>
 					<div className={css.ctaTop}>
-						<div className={css.line} />
 						<div>
 							<h2>Technologia. Wiedza. Indywidualne podejście.</h2>
 							<p>Laseroterapia, która regeneruje, nie zmienia.</p>
 						</div>
-						<a href="#contact" className={css.button}>
-							ZAREZERWUJ KONSULTACJĘ ✦
-						</a>
-						<div className={css.line} />
 					</div>
 
 					<div className={css.benefits}>
 						{benefits.map((item, index) => (
 							<div className={css.benefit} key={index}>
-								<div className={css.benefitIcon}>✺</div>
-								<p>{item}</p>
+								<img className={css.benefitIcon} src={item.icon} alt={item.title} />
+								<p>{item.title}</p>
 							</div>
 						))}
 					</div>

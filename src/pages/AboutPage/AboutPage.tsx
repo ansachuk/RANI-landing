@@ -1,30 +1,43 @@
 import Container from "../../components/Container/Container";
+
+import hero from "../../assets/images/about/hero.webp";
+import vase from "../../assets/images/about/vase.webp";
+import wall from "../../assets/images/about/wall.webp";
+import crown from "../../assets/images/about/crown.webp";
+import hands from "../../assets/images/about/hands.webp";
+import rectStar from "../../assets/images/about/rect-star.webp";
+import lotus from "../../assets/images/lotus.webp";
+import headRight from "../../assets/images/head-right.webp";
+import sun from "../../assets/images/sun.webp";
+
+import star from "../../assets/svg/star.svg";
+
 import css from "./AboutPage.module.scss";
 
 const values = [
 	{
-		icon: "♕",
+		icon: crown,
 		title: "Królowa nie jest symbolem perfekcji.",
 		text: "Jest symbolem obecności, spokoju, siły i godności. Kobiety, która zna siebie.",
 	},
 	{
-		icon: "✺",
+		icon: lotus,
 		title: "Subtelna sztuka odnowy.",
 		text: "Sposób wspierania jakości skóry, naturalnych rysów i pewności siebie.",
 	},
 	{
-		icon: "☼",
+		icon: sun,
 		title: "Piękno spokojne i naturalne.",
 		text: "Bez presji, bez przesady, bez utraty indywidualności.",
 	},
 ];
 
 const bottomItems = [
-	"Subtelność zamiast przesady",
-	"Indywidualne podejście i zrozumienie",
-	"Naturalne rezultaty i harmonia",
-	"Komfort, bezpieczeństwo i nowoczesna technologia",
-	"Ty jesteś królową. My to podkreślamy.",
+	{ title: "Subtelność zamiast przesady", icon: lotus },
+	{ title: "Indywidualne podejście i zrozumienie", icon: hands },
+	{ title: "Naturalne rezultaty i harmonia", icon: sun },
+	{ title: "Komfort, bezpieczeństwo i nowoczesna technologia", icon: rectStar },
+	{ title: "Ty jesteś królową. My to podkreślamy.", icon: crown },
 ];
 
 export default function AboutPage() {
@@ -45,10 +58,14 @@ export default function AboutPage() {
 								<br />z ciepłem, delikatnością i intencją.
 							</p>
 
-							<div className={css.decorLine} />
+							<div className={css.starWrapper}>
+								<img className={css.star} src={star} alt="Star" />
+							</div>
 						</div>
 
-						<div className={css.heroImage}>PHOTO</div>
+						<div className={css.heroImage}>
+							<img src={hero} alt="About RANI" />
+						</div>
 					</div>
 				</Container>
 			</section>
@@ -63,7 +80,9 @@ export default function AboutPage() {
 					<div className={css.valuesGrid}>
 						{values.map((item, index) => (
 							<div className={css.valueCard} key={index}>
-								<div className={css.valueIcon}>{item.icon}</div>
+								<div className={css.valueIcon}>
+									<img src={item.icon} alt={item.title} />
+								</div>
 								<h3>{item.title}</h3>
 								<p>{item.text}</p>
 							</div>
@@ -75,7 +94,9 @@ export default function AboutPage() {
 			<section className={css.story}>
 				<Container>
 					<div className={css.storyCard}>
-						<div className={css.storyImage}>PHOTO</div>
+						<div className={css.storyImage}>
+							<img src={vase} alt="Vase" />
+						</div>
 
 						<div className={css.storyContent}>
 							<p className={css.storyTitle}>
@@ -98,7 +119,9 @@ export default function AboutPage() {
 				<Container>
 					<div className={css.truthCard}>
 						<div className={css.truthContent}>
-							<div className={css.smallIcon}>✺</div>
+							<div className={css.smallIcon}>
+								<img src={headRight} alt="Head right" />
+							</div>
 
 							<h2>
 								Bo prawdziwe piękno nie polega
@@ -116,7 +139,9 @@ export default function AboutPage() {
 							</p>
 						</div>
 
-						<div className={css.truthImage}>PHOTO</div>
+						<div className={css.truthImage}>
+							<img src={wall} alt="Wall" />
+						</div>
 					</div>
 				</Container>
 			</section>
@@ -131,8 +156,10 @@ export default function AboutPage() {
 					<div className={css.bottomGrid}>
 						{bottomItems.map((item, index) => (
 							<div className={css.bottomItem} key={index}>
-								<div className={css.bottomIcon}>✦</div>
-								<p>{item}</p>
+								<div className={css.iconWrapper}>
+									<img className={css.bottomIcon} src={item.icon} alt={item.title} />
+								</div>
+								<p>{item.title}</p>
 							</div>
 						))}
 					</div>

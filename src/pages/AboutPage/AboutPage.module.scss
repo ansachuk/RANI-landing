@@ -15,11 +15,50 @@
 	min-height: 440px;
 }
 
+.starWrapper {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 48%;
+		left: 39%;
+
+		width: 75px;
+		height: 1.5px;
+		background-color: #c19a5b;
+
+		@media (min-width: 768px) {
+			width: 150px;
+		}
+
+		@media (min-width: 992px) {
+			left: 10px;
+		}
+	}
+}
+
+.star {
+	margin-top: 20px;
+	margin-left: 45%;
+
+	width: 28px;
+	height: 28px;
+
+	@media (min-width: 768px) {
+		width: 36px;
+		height: 36px;
+	}
+
+	@media (min-width: 992px) {
+		margin-left: 30px;
+	}
+}
+
 .heroContent {
 	max-width: 560px;
 
 	h1 {
-		margin-bottom: 24px;
 		font-family: "Cormorant Garamond", serif;
 		font-size: 56px;
 		font-weight: 500;
@@ -40,36 +79,20 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #a3ff12;
-	color: #812043;
-	font-weight: 700;
-	letter-spacing: 0.12em;
+
 	border-radius: 20px;
-	box-shadow: 0 20px 60px rgba(129, 32, 67, 0.12);
 }
 
 .heroImage {
 	height: 470px;
-	border-radius: 260px 260px 20px 20px;
-}
+	border-radius: 260px 100px 20px 20px;
 
-.decorLine {
-	width: 120px;
-	height: 1px;
-	margin-top: 34px;
-	background: #c67a36;
-	position: relative;
+	box-shadow: 0 20px 60px rgba(129, 32, 67, 0.12);
 
-	&::after {
-		content: "✥";
-		position: absolute;
-		top: 50%;
-		left: 18px;
-		transform: translateY(-50%);
-		color: #c67a36;
-		background: #fff7ee;
-		padding: 0 8px;
-		font-size: 15px;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
 }
 
@@ -96,12 +119,17 @@
 	text-align: center;
 	padding: 10px 34px;
 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	gap: 20px;
+
 	&:not(:last-child) {
 		border-right: 1px solid rgba(198, 122, 54, 0.4);
 	}
 
 	h3 {
-		margin-bottom: 18px;
 		font-family: "Cormorant Garamond", serif;
 		font-size: 23px;
 		font-weight: 500;
@@ -115,10 +143,8 @@
 }
 
 .valueIcon {
-	margin-bottom: 20px;
-	color: #c67a36;
-	font-size: 52px;
-	line-height: 1;
+	width: 76px;
+	height: 76px;
 }
 
 .story {
@@ -129,22 +155,32 @@
 	display: grid;
 	grid-template-columns: 1fr 1.08fr;
 	overflow: hidden;
-	border-radius: 18px;
+	border-radius: 18px 18px 0 0;
 	background: #fff1e3;
 }
 
 .storyImage {
 	min-height: 360px;
 	border-radius: 0;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		@media (min-width: 768px) {
+			mask-image: linear-gradient(to right, black 0%, black 50%, transparent 100%);
+
+			-webkit-mask-image: linear-gradient(to right, black 0%, black 50%, transparent 100%);
+		}
+	}
 }
 
 .storyContent {
 	padding: 48px 56px;
 
-	p {
-		font-size: 16px;
-		line-height: 1.75;
-	}
+	font-size: 16px;
+	line-height: 1.75;
 }
 
 .storyTitle {
@@ -171,7 +207,7 @@
 	grid-template-columns: 0.9fr 1.4fr;
 	overflow: hidden;
 	border-radius: 0 0 18px 18px;
-	background: #fff4e8;
+	background: #fff1e3;
 }
 
 .truthContent {
@@ -199,14 +235,30 @@
 }
 
 .smallIcon {
-	margin-bottom: 16px;
-	color: #c67a36;
-	font-size: 48px;
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 32px;
+
+	@media (min-width: 768px) {
+		margin: 0 0 32px;
+	}
 }
 
 .truthImage {
 	min-height: 350px;
 	border-radius: 0;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		@media (min-width: 768px) {
+			mask-image: linear-gradient(to left, black 0%, black 50%, transparent 100%);
+
+			-webkit-mask-image: linear-gradient(to left, black 0%, black 50%, transparent 100%);
+		}
+	}
 }
 
 .final {
@@ -234,26 +286,33 @@
 .bottomGrid {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
+
 	gap: 18px;
 }
 
 .bottomItem {
 	padding: 0 18px;
 
+	width: 100%;
+
 	&:not(:last-child) {
 		border-right: 1px solid rgba(198, 122, 54, 0.35);
 	}
 
 	p {
-		font-size: 13px;
+		font-size: 16px;
 		line-height: 1.4;
 	}
 }
 
-.bottomIcon {
-	margin-bottom: 10px;
-	color: #c67a36;
-	font-size: 30px;
+.iconWrapper {
+	width: 100%;
+
+	.bottomIcon {
+		width: 96px;
+		height: 96px;
+		margin: 0 auto 32px;
+	}
 }
 
 @media (max-width: 991.98px) {
@@ -274,14 +333,6 @@
 		p {
 			font-size: 26px;
 		}
-	}
-
-	.decorLine {
-		margin-inline: auto;
-	}
-
-	.heroImage {
-		height: 420px;
 	}
 
 	.valuesGrid {
@@ -330,7 +381,6 @@
 
 	.heroImage {
 		height: 360px;
-		border-radius: 180px 180px 18px 18px;
 	}
 
 	.intro {

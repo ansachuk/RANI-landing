@@ -25,21 +25,6 @@
 	}
 }
 
-.overline {
-	margin-bottom: 8px !important;
-	color: #c67a36;
-	font-size: 14px !important;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-}
-
-.smallDecor {
-	width: 115px;
-	height: 1px;
-	margin-bottom: 28px;
-	background: #c67a36;
-}
-
 .heroText h1 {
 	margin-bottom: 16px;
 	font-family: "Cormorant Garamond", serif;
@@ -78,11 +63,11 @@
 	justify-content: center;
 	width: 54px;
 	height: 54px;
+
+	padding: 12px;
 	flex-shrink: 0;
 	border: 1px solid #c67a36;
 	border-radius: 50%;
-	color: #c67a36;
-	font-size: 28px;
 }
 
 .heroImage {
@@ -90,10 +75,13 @@
 	align-items: center;
 	justify-content: center;
 	height: 610px;
-	background: #a3ff12;
-	color: #812043;
-	font-weight: 700;
-	letter-spacing: 0.16em;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
 	border-radius: 260px 260px 0 0;
 	box-shadow: 0 24px 80px rgba(129, 32, 67, 0.12);
 }
@@ -128,11 +116,12 @@
 	justify-content: center;
 	width: 100%;
 	height: 100%;
+
+	object-fit: contain;
 	min-height: 420px;
-	background: #a3ff12;
-	color: #812043;
-	font-weight: 700;
-	letter-spacing: 0.16em;
+
+	overflow: hidden;
+
 	border-radius: 12px;
 }
 
@@ -170,6 +159,7 @@
 	justify-content: center;
 	width: 46px;
 	height: 46px;
+	padding: 4px;
 	border: 1px solid #c67a36;
 	border-radius: 50%;
 	color: #c67a36;
@@ -235,6 +225,11 @@
 	padding: 22px 0 0 28px;
 	border-left: 1px solid rgba(198, 122, 54, 0.35);
 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
 	h3 {
 		margin-bottom: 18px;
 		font-family: "Cormorant Garamond", serif;
@@ -250,6 +245,9 @@
 }
 
 .sideIcon {
+	width: 50%;
+	max-width: 96px;
+
 	margin: 0 auto 22px;
 	color: #c67a36;
 	font-size: 64px;
@@ -261,8 +259,10 @@
 }
 
 .ctaTop {
-	display: grid;
-	grid-template-columns: 1fr auto auto 1fr;
+	display: flex;
+
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	gap: 28px;
 	margin-bottom: 30px;
@@ -282,29 +282,10 @@
 	}
 }
 
-.line {
-	height: 1px;
-	background: rgba(198, 122, 54, 0.35);
-}
-
-.button {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 46px;
-	padding: 0 30px;
-	border-radius: 5px;
-	background: #8a1746;
-	color: #fff;
-	font-size: 12px;
-	font-weight: 700;
-	text-decoration: none;
-	letter-spacing: 0.04em;
-}
-
 .benefits {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+
 	gap: 0;
 	border-top: 1px solid rgba(198, 122, 54, 0.3);
 	padding-top: 24px;
@@ -373,14 +354,6 @@
 
 	.treatmentCard {
 		grid-template-columns: 1fr;
-	}
-
-	.ctaTop {
-		grid-template-columns: 1fr;
-	}
-
-	.line {
-		display: none;
 	}
 
 	.benefits {
