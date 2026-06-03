@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Container from "../Container/Container";
 import ReserveBtn from "../ReserveBtn/ReserveBtn";
 
@@ -6,7 +8,6 @@ import arch from "../../assets/images/arch.webp";
 import jasmine from "../../assets/images/jasmine.webp";
 
 import css from "./Hero.module.scss";
-import { Link } from "react-router-dom";
 
 export default function Hero() {
 	return (
