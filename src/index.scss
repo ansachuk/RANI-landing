@@ -16,6 +16,21 @@ html {
 	color: #2b0e00cb;
 }
 
+html,
+body,
+#root {
+	min-height: 100vh;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
 ul,
 ol {
 	list-style: none;
