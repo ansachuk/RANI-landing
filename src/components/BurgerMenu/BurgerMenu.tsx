@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import css from "./BurgerMenu.module.scss";
 
-export default function BurgerMenu({ isOpen, onClose }) {
+export default function BurgerMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
 	useEffect(() => {
 		document.body.style.overflow = isOpen ? "hidden" : "";
 
@@ -12,7 +12,7 @@ export default function BurgerMenu({ isOpen, onClose }) {
 		};
 	}, [isOpen]);
 
-	const getNavLinkClass = ({ isActive }) => (isActive ? `${css.navLink} ${css.active}` : css.navLink);
+	const getNavLinkClass = ({ isActive }: { isActive: boolean }) => (isActive ? `${css.navLink} ${css.active}` : css.navLink);
 
 	return (
 		<div className={`${css.burgerMenu} ${isOpen ? css.open : ""}`}>
