@@ -24,4 +24,10 @@
 		width: 30px;
 		height: 30px;
 	}
+
+	@media (min-width: 1728px) {
+		font-size: 20px;
+
+		max-width: 350px;
+	}
 }

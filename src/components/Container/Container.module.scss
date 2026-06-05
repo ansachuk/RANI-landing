@@ -1,6 +1,7 @@
 .container {
-	padding: 0 20px;
+	width: 100%;
 	margin: 0 auto;
+	padding: 0 20px;
 
 	@media (min-width: 768px) {
 		padding: 0 32px;
@@ -12,5 +13,13 @@
 
 	@media (min-width: 1440px) {
 		max-width: 1440px;
+	}
+
+	@media (min-width: 1728px) {
+		max-width: 1728px;
+	}
+
+	@media (min-width: 2240px) {
+		max-width: 1920px;
 	}
 }

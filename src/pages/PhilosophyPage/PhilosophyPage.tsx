@@ -75,7 +75,7 @@ const values = [
 
 export default function PhilosophyPage() {
 	return (
-		<main className={css.page}>
+		<>
 			<section className={css.hero}>
 				<Container>
 					<div className={css.heroInner}>
@@ -202,6 +202,6 @@ export default function PhilosophyPage() {
 					</div>
 				</Container>
 			</section>
-		</main>
+		</>
 	);
 }

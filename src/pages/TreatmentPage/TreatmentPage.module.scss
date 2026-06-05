@@ -12,6 +12,10 @@
 	grid-template-columns: 0.92fr 1.08fr;
 	gap: 48px;
 	align-items: end;
+
+	@media (min-width: 1728px) {
+		gap: 0;
+	}
 }
 
 .heroText {
@@ -22,6 +26,12 @@
 		margin-bottom: 18px;
 		font-size: 15px;
 		line-height: 1.65;
+
+		@media (min-width: 1728px) {
+			font-size: 22px;
+
+			max-width: 700px;
+		}
 	}
 }
 
@@ -32,6 +42,10 @@
 	font-weight: 500;
 	line-height: 0.95;
 	letter-spacing: 0.02em;
+
+	@media (min-width: 1728px) {
+		font-size: 96px;
+	}
 }
 
 .script {
@@ -41,6 +55,10 @@
 	font-size: 42px !important;
 	line-height: 1.05 !important;
 	color: #812043;
+
+	@media (min-width: 1728px) {
+		font-size: 64px !important;
+	}
 }
 
 .note {
@@ -54,6 +72,10 @@
 
 	p {
 		margin-bottom: 0;
+	}
+
+	@media (min-width: 1728px) {
+		gap: 40px;
 	}
 }
 
@@ -75,6 +97,10 @@
 	align-items: center;
 	justify-content: center;
 	height: 610px;
+
+	@media (min-width: 1728px) {
+		height: 900px;
+	}
 
 	img {
 		width: 100%;
@@ -151,6 +177,10 @@
 		font-family: "Cormorant Garamond", serif;
 		font-size: 26px;
 		font-weight: 500;
+
+		@media (min-width: 1728px) {
+			font-size: 30px;
+		}
 	}
 
 	p {
@@ -158,6 +188,10 @@
 		font-size: 11px;
 		line-height: 1.35;
 		letter-spacing: 0.04em;
+
+		@media (min-width: 1728px) {
+			font-size: 12px;
+		}
 	}
 }
 
@@ -181,6 +215,10 @@
 		margin-bottom: 18px;
 		font-size: 14px;
 		line-height: 1.65;
+
+		@media (min-width: 1728px) {
+			font-size: 20px;
+		}
 	}
 }
 
@@ -194,6 +232,10 @@
 		font-family: "Cormorant Garamond", serif;
 		font-size: 34px;
 		color: #c67a36;
+
+		@media (min-width: 1728px) {
+			font-size: 40px;
+		}
 	}
 
 	h2 {
@@ -201,6 +243,10 @@
 		font-size: 32px;
 		font-weight: 500;
 		line-height: 1.12;
+
+		@media (min-width: 1728px) {
+			font-size: 40px;
+		}
 	}
 }
 
@@ -210,6 +256,10 @@
 	font-size: 13px;
 	font-weight: 700;
 	letter-spacing: 0.08em;
+
+	@media (min-width: 1728px) {
+		font-size: 20px;
+	}
 }
 
 .mainContent ul {
@@ -225,6 +275,10 @@
 
 		&::marker {
 			color: #c67a36;
+		}
+
+		@media (min-width: 1728px) {
+			font-size: 14px;
 		}
 	}
 }
@@ -244,11 +298,19 @@
 		font-size: 25px;
 		font-weight: 500;
 		line-height: 1.18;
+
+		@media (min-width: 1728px) {
+			font-size: 28px;
+		}
 	}
 
 	p {
 		font-size: 13px;
 		line-height: 1.65;
+
+		@media (min-width: 1728px) {
+			font-size: 16px;
+		}
 	}
 }
 
@@ -280,6 +342,10 @@
 		font-family: "Cormorant Garamond", serif;
 		font-size: 27px;
 		font-weight: 500;
+
+		@media (min-width: 1728px) {
+			font-size: 40px;
+		}
 	}
 
 	p {
@@ -287,6 +353,10 @@
 		font-size: 34px;
 		line-height: 1;
 		color: #812043;
+
+		@media (min-width: 1728px) {
+			font-size: 56px;
+		}
 	}
 }
 
@@ -314,12 +384,11 @@
 	p {
 		font-size: 13px;
 		line-height: 1.45;
-	}
-}
 
-.benefitIcon {
-	color: #c67a36;
-	font-size: 38px;
+		@media (min-width: 1728px) {
+			font-size: 18px;
+		}
+	}
 }
 
 @media (max-width: 1199.98px) {

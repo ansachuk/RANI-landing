@@ -1,6 +1,5 @@
 .page {
 	font-family: "Montserrat", sans-serif;
-	overflow: hidden;
 }
 
 .hero {
@@ -9,13 +8,20 @@
 	min-height: calc(100vh - 120px);
 	display: flex;
 	align-items: center;
+
+	overflow: hidden;
+
+	@media (min-width: 1440px) {
+		padding: 0;
+
+		min-height: calc(100vh - 300px);
+	}
 }
 
 .heroInner {
 	display: grid;
 	grid-template-columns: 0.82fr 1.18fr;
 	align-items: center;
-	gap: 54px;
 }
 
 .content {
@@ -31,6 +37,10 @@
 	font-weight: 500;
 	line-height: 0.98;
 	letter-spacing: -0.03em;
+
+	@media (min-width: 1728px) {
+		font-size: 80px;
+	}
 }
 
 .decorLine {
@@ -57,6 +67,10 @@
 	margin-bottom: 36px;
 	font-size: 21px;
 	line-height: 1.55;
+
+	@media (min-width: 1728px) {
+		font-size: 24px;
+	}
 }
 
 .script {
@@ -65,6 +79,10 @@
 	font-size: 40px;
 	line-height: 1;
 	color: #812043;
+
+	@media (min-width: 1728px) {
+		font-size: 48px;
+	}
 }
 
 .contactList {
@@ -84,6 +102,10 @@
 	p {
 		font-size: 18px;
 		line-height: 1.45;
+
+		@media (min-width: 1728px) {
+			font-size: 20px;
+		}
 	}
 }
 
@@ -101,7 +123,11 @@
 
 .imageWrap {
 	position: relative;
-	min-height: 720px;
+	min-height: 900px;
+
+	@media (min-width: 1728px) {
+		min-height: 1000px;
+	}
 }
 
 .heroImage {
@@ -116,13 +142,11 @@
 	object-fit: cover;
 	object-position: bottom;
 
-	border-radius: 260px 0 0 0;
+	border-radius: 20px;
 	box-shadow: 0 24px 80px rgba(129, 32, 67, 0.12);
 
 	@media (min-width: 992px) {
-		mask-image: linear-gradient(to rightс, transparent 0%, black 50%), linear-gradient(to bottom, transparent 0%, black 50%);
-
-		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%), linear-gradient(to bottom, transparent 0%, black 60%);
+		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%);
 
 		mask-composite: intersect;
 		-webkit-mask-composite: source-in;
@@ -197,21 +221,10 @@
 		text-align: left;
 	}
 
-	.imageWrap {
-		min-height: 480px;
-	}
-
 	.heroImage {
 		position: static;
 		height: 480px;
 		border-radius: 240px 240px 20px 20px;
-
-		mask-image: linear-gradient(to left, transparent 0%, black 50%), linear-gradient(to top, transparent 0%, black 50%);
-
-		-webkit-mask-image: linear-gradient(to left, transparent 0%, black 50%), linear-gradient(to top, transparent 0%, black 50%);
-
-		mask-composite: intersect;
-		-webkit-mask-composite: source-in;
 	}
 }
 
@@ -263,7 +276,7 @@
 	}
 
 	.heroImage {
-		height: 340px;
+		height: 400px;
 		border-radius: 180px 180px 18px 18px;
 	}
 }

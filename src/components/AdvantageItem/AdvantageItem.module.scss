@@ -43,6 +43,10 @@
 	letter-spacing: -0.5px;
 	width: 60%;
 	text-align: center;
+
+	@media (min-width: 1728px) {
+		font-size: 36px;
+	}
 }
 
 .description {
@@ -54,4 +58,8 @@
 	letter-spacing: -0.5px;
 
 	flex-grow: 1;
+
+	@media (min-width: 1728px) {
+		font-size: 24px;
+	}
 }

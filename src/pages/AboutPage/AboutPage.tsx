@@ -42,21 +42,16 @@ const bottomItems = [
 
 export default function AboutPage() {
 	return (
-		<main className={css.aboutPage}>
+		<>
 			<section className={css.hero}>
 				<Container>
 					<div className={css.heroInner}>
 						<div className={css.heroContent}>
 							<h1>RANI to piękno z klasą.</h1>
-
-							<p>
-								Kobiecość bez presji.
-								<br />
-								Luksus bez przesady.
-								<br />
-								Nowoczesna medycyna estetyczna
-								<br />z ciepłem, delikatnością i intencją.
-							</p>
+							<p>Kobiecość bez presji.</p>
+							<p>Luksus bez przesady.</p>
+							<p> Nowoczesna medycyna estetyczna</p>
+							<p>z ciepłem, delikatnością i intencją.</p>
 
 							<div className={css.starWrapper}>
 								<img className={css.star} src={star} alt="Star" />
@@ -165,6 +160,6 @@ export default function AboutPage() {
 					</div>
 				</Container>
 			</section>
-		</main>
+		</>
 	);
 }

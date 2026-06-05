@@ -41,7 +41,7 @@ const contactItems = [
 
 export default function ContactPage() {
 	return (
-		<main className={css.page}>
+		<>
 			<section className={css.hero}>
 				<Container>
 					<div className={css.heroInner}>
@@ -79,6 +79,6 @@ export default function ContactPage() {
 					</div>
 				</Container>
 			</section>
-		</main>
+		</>
 	);
 }
