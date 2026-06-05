@@ -1,0 +1,30 @@
+.loading {
+	.loading {
+		min-height: calc(100vh - 300px);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+	}
+
+	.loading::after {
+		content: "";
+
+		width: 48px;
+		height: 48px;
+
+		border: 3px solid rgba(185, 120, 50, 0.2);
+		border-top-color: #b97832;
+		border-radius: 50%;
+
+		animation: spinner 0.8s linear infinite;
+	}
+
+	@keyframes spinner {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}
