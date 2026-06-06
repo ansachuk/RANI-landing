@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import css from "./BurgerMenu.module.scss";
+import Logo from "../Logo/Logo";
+import ReserveBtn from "../ReserveBtn/ReserveBtn";
 
 export default function BurgerMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
 	useEffect(() => {
@@ -16,9 +18,12 @@ export default function BurgerMenu({ isOpen, onClose }: { isOpen: boolean; onClo
 
 	return (
 		<div className={`${css.burgerMenu} ${isOpen ? css.open : ""}`}>
-			<button className={css.closeBtn} type="button" onClick={onClose} aria-label="Close menu">
-				×
-			</button>
+			<div className={css.header}>
+				<Logo />
+				<button className={css.closeBtn} type="button" onClick={onClose} aria-label="Close menu">
+					×
+				</button>
+			</div>
 
 			<nav className={css.nav}>
 				<NavLink end className={getNavLinkClass} to="/RANI-landing" onClick={onClose}>
@@ -41,6 +46,8 @@ export default function BurgerMenu({ isOpen, onClose }: { isOpen: boolean; onClo
 					<span>Kontakt</span>
 				</NavLink>
 			</nav>
+
+			<ReserveBtn />
 		</div>
 	);
 }

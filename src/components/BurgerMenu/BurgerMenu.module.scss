@@ -15,9 +15,18 @@
 
 	border: 1px solid #2b0e00cb;
 
+	padding: 24px;
+
 	@media (min-width: 1200px) {
 		display: none;
 	}
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
 }
 
 .open {
@@ -25,10 +34,6 @@
 }
 
 .closeBtn {
-	position: absolute;
-	top: 24px;
-	right: 24px;
-
 	border: none;
 	background: transparent;
 
@@ -41,8 +46,12 @@
 .nav {
 	display: flex;
 	flex-direction: column;
+
+	justify-content: center;
 	align-items: center;
 	gap: 28px;
+
+	flex-grow: 1;
 }
 
 .navLink {
